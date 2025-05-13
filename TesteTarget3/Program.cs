@@ -23,7 +23,7 @@ namespace TesteTarget3
         static void Main(string[] args)
         {
             //string arquivo = "C:\\PROGRAMACAO\\TesteTarget\\TesteTarget3\\BaseDeDados\\dados.json";
-            string arquivo = "TesteTarget3\\BaseDeDados\\dados.json";
+            string arquivo = Path.Combine("BaseDeDados", "dados.json");
 
             if (!File.Exists(arquivo))
             {

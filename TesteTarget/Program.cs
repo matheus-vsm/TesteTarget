@@ -6,7 +6,7 @@ using System.Globalization;
 //Imprimir(SOMA);
 //Ao final do processamento, qual será o valor da variável SOMA?
 
-namespace TesteTarget1
+namespace TesteTarget
 {
     class Program
     {
