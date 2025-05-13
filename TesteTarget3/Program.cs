@@ -40,6 +40,17 @@ namespace TesteTarget3
                 Console.WriteLine("Arquivo JSON está vazio ou com formato inválido.");
                 return;
             }
+
+            var diasComFaturamento = dados.Where(d => d.Valor > 0).ToList();
+
+            double menor = diasComFaturamento.Min(d => d.Valor);
+            double maior = diasComFaturamento.Max(d => d.Valor);
+            double media = diasComFaturamento.Average(d => d.Valor);
+            int diasAcimaMedia = diasComFaturamento.Count(d => d.Valor > media);
+
+            Console.WriteLine($"Menor faturamento: R$ {menor:F2}");
+            Console.WriteLine($"Maior faturamento: R$ {maior:F2}");
+            Console.WriteLine($"Dias com faturamento acima da média ({media:F2}): {diasAcimaMedia} dias");
         }
     }
 }
